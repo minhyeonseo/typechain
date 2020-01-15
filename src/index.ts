@@ -45,7 +45,7 @@ const createNewBlock = (data:string) : Block =>{
     addBlock(newBlock);
     return newBlock;
 } 
-//console.log(createNewBlock("hewllo"),createNewBlock("byebye"));
+//console.log(createNewBlock("hello"),createNewBlock("byebye"));
 const getHashForBlock = (aBlock: Block) :string => Block.calculateBlockHash(aBlock.index,aBlock.previousHash,aBlock.timestamp,aBlock.data)
 const isBlockVaild = (candidateBlock : Block,previousBlock : Block) : boolean =>{
     if(!Block.vaildateStructure(candidateBlock)){
